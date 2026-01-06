@@ -1,0 +1,48 @@
+### GET all administrateurs
+GET http://localhost:8080/api/v1/admin
+
+###
+POST http://localhost:8080/api/v1/admin/create
+Content-Type: application/json
+
+{
+
+  "nom": "sadawdwda",
+  "prenom": "Ahmawdawdwed",
+  "email": "ahmed.awdbenali@admin.com",
+  "motDePasse": "pwdaass1234",
+  "dateNaissancce": "1985-07-15",
+  "sexe": "M",
+  "telephone": "0612345678",
+  "adresse": "123drttdhrthtrh Bd Hassan II, Casablanca",
+  "CIN": "BH123456",
+  "photoProfil": "photo_ahmed.jpg",
+  "numeroLicence": "ADMIN-2025-001"
+}
+
+###
+
+###
+PUT http://localhost:8080/api/v1/admin/update/1
+Content-Type: application/json
+
+{
+  "nom": "Benali",
+  "prenom": "Ahmed",
+  "email": "ahmed.new@admin.com",
+  "motDePasse": "newpass5678",
+  "dateNaissancce": "1985-06-15",
+  "sexe": "M",
+  "telephone": "0699887766",
+  "adresse": "45 Av des FAR, Rabat",
+  "CIN": "BH123456",
+  "photoProfil": "photo_ahmed_v2.jpg",
+  "numeroLicence": "ADMIN-2025-001"
+}
+
+###
+DELETE http://localhost:8080/api/v1/admin/1
+###
+PUT http://localhost:8080/api/v1/admin/activer/1
+###
+PUT http://localhost:8080/api/v1/admin/desactiver/1

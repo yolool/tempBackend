@@ -1,36 +1,30 @@
-server:
-  servlet:
-    session:
-      timeout: 60m
 
 spring:
   application:
-    name: sfm
+    name: E-medcare
   datasource:
-    url: jdbc:postgresql://localhost:5432/E-MedCare
-    username: postgres
-    password: z6$Q432yl
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:mysql://localhost:3306/e_medcare
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
         use_sql_comments: true
-    database: postgresql
+    database: mysql
 
   flyway:
-    schemas: public
-    default-schema: public
-    url: jdbc:postgresql://localhost:5432/E-MedCare
-    user: postgres
-    password: z6$Q432yl
-    locations: classpath:db/migration
     enabled: true
-    clean_on_startup: false
-    baseline_on_migrate: true
+    url: jdbc:mysql://localhost:3306/e_medcare
+    user: root
+    password: ""
+    schemas: e_medcare
+    locations: classpath:db/migration
+    baseline-on-migrate: true
     out-of-order: true
