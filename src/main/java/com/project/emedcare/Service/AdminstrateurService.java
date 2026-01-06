@@ -26,7 +26,7 @@ public class AdminstrateurService {
         Compte compte = new Compte();
         compte.setEmail(adminDto.email());
         compte.setMotDePasse(passwordEncoder.encode(adminDto.motDePasse()));
-        compte.setRole("ADMIN");
+        compte.setRole("admin");
         compte.setCurrentdate(LocalDateTime.now()); // Assuming Date or LocalDate
         compte.setStatut("Active");
         compte = compteRepository.save(compte);
